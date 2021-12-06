@@ -37,17 +37,11 @@ body{
 }
 /*Estilizando o códificador*/
 .principal{
-  background: #FFE082;
-  height: 500px;
+  height: 600px;
+  background: #A6E7FF;
 }
-.container{
-  width: 1080px;
-  margin: 0 auto;
-  text-align: center;
-}
-.subtitulo{
-  color:#FF8A65 ;
-}
+
+
 /*Estilizando o footer*/
 .footer{
    height: 80px;
