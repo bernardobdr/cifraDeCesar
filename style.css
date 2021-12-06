@@ -6,44 +6,44 @@ Amarelo-Dourado - #FFE082
 */
 
 /*Estilos Gerais*/
- body{
-   margin: 0;
-   padding: 0;
-   box-sizing: border-box;
-   font-family: 'Roboto', sans-serif;
-   
- }
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  
+}
 /*Estilo Header*/
 .header{
-  height: 80px;
-  width: 100%;
-  background-color: #FF8A65;
+ height: 80px;
+ width: 100%;
+ background-color: #FF8A65;
 }
 .container-header{
-  width: 960px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  align-items: center;
+ width: 960px;
+ margin: 0 auto;
+ display: flex;
+ justify-content: space-between;
+ flex-wrap: wrap;
+ align-items: center;
 }
 .logo{
-  border: 2px solid #FFE082;
+ border: 2px solid #FFE082;
 }
 .titulo{
-  color: #FFF;
-  text-transform: uppercase;
-  letter-spacing: 3px;
+ color: #FFF;
+ text-transform: uppercase;
+ letter-spacing: 3px;
 }
 .footer{
-    height: 80px;
-    width: 100%;
-    background-color: #FF8A65;
+   height: 80px;
+   width: 100%;
+   background-color: #FF8A65;
 }
 .footer p{
-  text-align: center;
-  padding: 30px;
-  color: #FFF;
-  font-weight: bold;
-  letter-spacing: 2px;
+ text-align: center;
+ padding: 30px;
+ color: #FFF;
+ font-weight: bold;
+ letter-spacing: 2px;
 }  
