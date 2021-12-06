@@ -35,6 +35,20 @@ body{
  text-transform: uppercase;
  letter-spacing: 3px;
 }
+/*Estilizando o códificador*/
+.principal{
+  background: #FFE082;
+  height: 500px;
+}
+.container{
+  width: 1080px;
+  margin: 0 auto;
+  text-align: center;
+}
+.subtitulo{
+  color:#FF8A65 ;
+}
+/*Estilizando o footer*/
 .footer{
    height: 80px;
    width: 100%;
