@@ -31,3 +31,15 @@ radioCesar[1].addEventListener('click', function () {
     btnCodDecod.innerHTML = 'Mensagem decodificado:'
   }
 })
+
+radioBase[0].addEventListener('click', function () {
+  if (radioBase[0].checked) {
+    btnCodDecod2.innerHTML = 'Resultado codificado:';
+  }
+})
+
+radioBase[1].addEventListener('click', function () {
+  if (radioBase[1].checked) {
+    btnCodDecod2.innerHTML = 'Mensagem decodificado:';
+  }
+})
