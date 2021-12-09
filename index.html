@@ -26,28 +26,33 @@
   </header>
   <main class="principal">
     <div class="container">
-      <select id="selecao">
-        <optgroup>
-          <option value="base64">
-            Base 64
-          </option>
-          <option value="cifraCesar">
-            Cifra de Cesar
-          </option>
-        </optgroup>
-      </select>
+      <form class="formulario">
+        <legend class="tituloForm">Decifrando</legend>
+        <select id="selecao">
+          <optgroup>
+            <option value="base64">
+              Base 64
 
-      <div id="divCifraDeCesar">
-        Cifra de Cesar
-        <input type="radio" name="inputCifra" class="inputCifra">
-        <input type="range">
-        <input type="radio" name="inputCifra" class="inputCifra">
-      </div>
-      <div id=divBase64>
-        Base64
+            </option>
+            <option value="cifraCesar">
+              Cifra de Cesar
+            </option>
+          </optgroup>
+        </select>
+        <div id="divCifraDeCesar">
+          Cifra de Cesar
 
-      </div>
+          <input type="radio" name="inputCifra" class="inputCifra">
+          <input type="range">
+          <input type="radio" name="inputCifra" class="inputCifra">
+        </div>
+        <div id=divBase64>
+          Base64
+        </div>
+        <textarea name="mensagem" id="mensagemCesar" cols="30" rows="10"></textarea>
+        <textarea name="mensagem" id="mensagemCesar" cols="30" rows="10"></textarea>
     </div>
+    </form>
   </main>
   <footer class="footer">
     <p>Feito para fins de aprendizado. - 2021</p>
