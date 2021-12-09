@@ -27,19 +27,16 @@
   <main class="principal">
     <div class="container">
       <form class="formulario">
-        <legend class="tituloForm">Decifrando</legend>
-        <select id="selecao">
-          <optgroup>
-            <option value="base64">
-              Base 64
+        <legend class="tituloForm">Decifrando e Decodificando</legend>
 
-            </option>
-            <option value="cifraCesar">
-              Cifra de Cesar
-            </option>
-          </optgroup>
+        <select id="escolhaComoDecifrar">
+          <option value="0">Como quer decifrar?</option>
+          <option value="1" id="<!--cifra-->cifraDeCesar">Cifra de Cesar</option>
+          <option value="2" id="base64">Base 64</option>
         </select>
-        <div id="divCifraDeCesar">
+
+
+        // <div id="divCifraDeCesar">
           Cifra de Cesar
 
           <input type="radio" name="inputCifra" class="inputCifra">
@@ -51,8 +48,8 @@
         </div>
         <div>
           <h2 class="tituloTextArea">Digite sua Mensagem</h2>
-          <textarea name="mensagem" id="mensagemCesar" cols="30" rows="10"></textarea>
-          <textarea name="mensagem" id="mensagemBase64" cols="30" rows="10"></textarea>
+          <textarea name="mensagem" id="mensagem" cols="30" rows="10" placeholder="Digite sua mensagem"></textarea>
+          <textarea name="mensagem" id="mensagemFinalizada" cols="30" rows="10" placeholder="Aqui está o resultado"></textarea>
         </div>
     </div>
     </form>
