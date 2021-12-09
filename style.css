@@ -44,14 +44,18 @@ body{
   width: 960px;
   margin: 0 auto;
 }
-.cifra-de-cesar{
-  
-}
 .subtitulo{
   text-align: center;
   color: #111;
 }
 
+/*Estilizando o form*/
+  #divCifra{
+    display: none;
+  }
+  #divBase64{
+    display: none;
+  }
 
 /*Estilizando o footer*/
 .footer{

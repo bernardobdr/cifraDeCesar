@@ -27,7 +27,7 @@
   <main class="principal">
     <div class="container">
       <form class="cifra-de-cesar">
-        <select>
+        <select id="selecao">
           <optgroup>
             <option value="base64">
               Base 64
@@ -38,10 +38,12 @@
           </optgroup>
         </select>
         <div id="divCifra">
-
+          Cifra
+          <input type="radio" name="inputCifra" class="inputCifra">
+          <input type="radio" name="input">
         </div>
         <div id=divBase64>
-
+          Base64
         </div>
       </form>
     </div>
@@ -50,5 +52,6 @@
     <p>Feito para fins de aprendizado. - 2021</p>
   </footer>
 </body>
+<script src="script.js"></script>
 
 </html>
