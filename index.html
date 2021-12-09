@@ -24,9 +24,12 @@
       </div>
     </div>
   </header>
+
   <main class="principal">
+
     <div class="container">
       <form class="formulario">
+
         <legend class="tituloForm">Cifrar e Decifrar</legend>
 
         <select id="escolhaComoDecifrar">
@@ -52,7 +55,7 @@
               <output>13</output>
             </div>
             <div class="mensagem">
-              <p>Escreva uma mensagem:</p>
+              <p>Escreva sua mensagem:</p>
               <textarea id="mensagemDeEntrada">
               </textarea>
             </div>
@@ -62,7 +65,7 @@
             </div>
           </div>
 
-          <div id="formBase">
+          <div id="formBase64">
             <p>Vai decodificar ou codificar?</p>
             <div>
               <input type="radio" name="codDecod" label="cod" class="radio2" />
@@ -72,6 +75,14 @@
               <input type="radio" name="codDecod" label="decod" class="radio2" />
               <label for="decod">Decodificar</label>
             </div>
+            <div>
+              <input type="radio" name="codDecod" label="decod" class="radio2" />
+              <label for="decod">Decodificar</label>
+            </div>
+            <div id="mensagem">
+              <p>Escreva sua mensagem:</p>
+              <textarea id="mensagemDeEntrada2"></textarea>
+            </div>
 
 
 
@@ -88,14 +99,16 @@
 
 
 
-
-
+          </div>
         </form>
   </main>
+
   <footer class="footer">
     <p>Feito para fins de aprendizado. - 2021</p>
   </footer>
+
 </body>
+
 <script src="script.js"></script>
 
 </html>
