@@ -51,12 +51,12 @@ var valueChave
 
 entrada.addEventListener('keyup', function () {
   if (radioCesar[0].checked) {
-    var valueText = entrada.value.split('');
-    valueChave = parseInt(chavePasso.value);
-    saida.value = codifica(valueText, valueChave);
+    var valueText = entrada.value.split('')
+    valueChave = parseInt(chavePasso.value)
+    saida.value = codifica(valueText, valueChave)
   } else {
-    var valueText = entrada.value.split('');
-    valueChave = parseInt(chavePasso.value);
+    var valueText = entrada.value.split('')
+    valueChave = parseInt(chavePasso.value)
     saida.value = decodifica(valueText, valueChave);
   }
 })
@@ -66,11 +66,32 @@ function codifica(texto, chavePasso) {
   return (
     texto
       .map((str) => {
-        var cripto = str.charCodeAt();
+        var cripto = str.charCodeAt()
         if (cripto >= 65 && cripto <= 90) {
-          return String.fromCharCode(((cripto - 65 + chavePasso) % 26) + 65);
+          return String.fromCharCode(((cripto - 65 + chavePasso) % 26) + 65)
         } else if (cripto >= 97 && cripto <= 122) {
-          return String.fromCharCode(((cripto - 97 + chavePasso) % 26) + 97);
+          return String.fromCharCode(((cripto - 97 + chavePasso) % 26) + 97)
+        } else {
+          return str
+        }
+      })
+      .join('')
+  )
+}
+
+function decodifica(texto, chavePasso) {
+  return (
+    texto
+      .map((str) => {
+        var cripto = str.charCodeAt()
+        if (cripto >= 65 && cripto <= 90) {
+          return String.fromCharCode(cripto - 65 - chavePasso < 0)?
+              String.fromCharCode(((cripto - 65 - chavePasso + 26) % 26) + 65)
+            : String.fromCharCode(((cripto - 65 - chavePasso) % 26) + 65)
+        } else if (cripto >= 97 && cripto <= 122) {
+          return String.fromCharCode(cripto - 97 - chavePasso < 0)
+            ? String.fromCharCode(((cripto - 97 - chavePasso + 26) % 26) + 97)
+            : String.fromCharCode(((cripto - 97 - chavePasso) % 26) + 65)
         } else {
           return str;
         }
