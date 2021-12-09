@@ -14,11 +14,12 @@ escolha.addEventListener('change', function () {
     formCesar.style.display = 'none'
   }
 });
+// Mudar botão de decodificar e codificar
 
 var radioCifraDeCesar = document.querySelectorAll('.radio')
-var radioBase64 = document.querySelectorAll('.radio2')
-var btnCodDecod = document.getElementById('codDec')
-var btnCodDecod2 = document.getElementById("codDec2")
+var radioBase64 = document.querySelectorAll('.radio-2')
+var btnCodificarDecodificar1 = document.getElementById('codDec')
+var btnCodificarDecodificar2 = document.getElementById("codDec2")
 
 radioCesar[0].addEventListener('click', function () {
   if (radioCesar[0].checked) {
