@@ -27,32 +27,57 @@
   <main class="principal">
     <div class="container">
       <form class="formulario">
-        <legend class="tituloForm">Decifrando e Decodificando</legend>
+        <legend class="tituloForm">Cifrar e Decifrar</legend>
 
         <select id="escolhaComoDecifrar">
-          <option value="0">Como quer decifrar?</option>
+          <option value="0">Como Decifrar</option>
           <option value="1" id="<!--cifra-->cifraDeCesar">Cifra de Cesar</option>
           <option value="2" id="base64">Base 64</option>
         </select>
+        <form id="form">
+
+          <div id="formCesar">
+            <p>Vai decodificar ou codificar?</p>
+            <div>
+              <input type="radio" name="codificarEDecodificar" label="codificar" checked class="radio" />
+              <label for="radio">Codificar</label>
+            </div>
+            <div>
+              <input type="radio" name="codDecod" label="decod" class="radio" />
+              <label for="radio">Decodificar</label>
+            </div>
 
 
-        // <div id="divCifraDeCesar">
-          Cifra de Cesar
 
-          <input type="radio" name="inputCifra" class="inputCifra">
-          <input type="range">
-          <input type="radio" name="inputCifra" class="inputCifra">
-        </div>
-        <div id=divBase64>
-          Base64
-        </div>
-        <div>
-          <h2 class="tituloTextArea">Digite sua Mensagem</h2>
-          <textarea name="mensagem" id="mensagem" cols="30" rows="10" placeholder="Digite sua mensagem"></textarea>
-          <textarea name="mensagem" id="mensagemFinalizada" cols="30" rows="10" placeholder="Aqui está o resultado"></textarea>
-        </div>
-    </div>
-    </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <div id=divBase64>
+              Base64
+            </div>
+            <div>
+              <h2 class="tituloTextArea">Digite sua Mensagem</h2>
+              <textarea name="mensagem" id="mensagem" cols="30" rows="10" placeholder="Digite sua mensagem"></textarea>
+              <textarea name="mensagem" id="mensagemFinalizada" cols="30" rows="10" placeholder="Aqui está o resultado"></textarea>
+            </div>
+          </div>
+        </form>
   </main>
   <footer class="footer">
     <p>Feito para fins de aprendizado. - 2021</p>
