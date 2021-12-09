@@ -26,26 +26,27 @@
   </header>
   <main class="principal">
     <div class="container">
-      <form class="cifra-de-cesar">
-        <select id="selecao">
-          <optgroup>
-            <option value="base64">
-              Base 64
-            </option>
-            <option value="cifraCesar">
-              Cifra de Cesar
-            </option>
-          </optgroup>
-        </select>
-        <div id="divCifra">
-          Cifra
-          <input type="radio" name="inputCifra" class="inputCifra">
-          <input type="radio" name="input">
-        </div>
-        <div id=divBase64>
-          Base64
-        </div>
-      </form>
+      <select id="selecao">
+        <optgroup>
+          <option value="base64">
+            Base 64
+          </option>
+          <option value="cifraCesar">
+            Cifra de Cesar
+          </option>
+        </optgroup>
+      </select>
+
+      <div id="divCifraDeCesar">
+        Cifra de Cesar
+        <input type="radio" name="inputCifra" class="inputCifra">
+        <input type="range">
+        <input type="radio" name="inputCifra" class="inputCifra">
+      </div>
+      <div id=divBase64>
+        Base64
+
+      </div>
     </div>
   </main>
   <footer class="footer">

@@ -37,19 +37,21 @@ body{
 }
 /*Estilizando o códificador*/
 .principal{
-  height: 600px;
+  height: 500px;
   background: #A6E7FF;
 }
 .container{
   width: 960px;
   margin: 0 auto;
+  text-align: center;
+  padding: 40px;
 }
 .subtitulo{
   text-align: center;
   color: #111;
 }
-
 /*Estilizando o form*/
+
   #divCifra{
     display: none;
   }
