@@ -1,23 +1,23 @@
 var escolha = document.querySelector('#escolhaComoDecifrar')
 var formCesar = document.querySelector('#formCifraCesar')
-var formBase = document.querySelector('#formBase64')
+var formBase64 = document.querySelector('#formBase64')
 
-metodo.addEventListener('change', function () {
-  if (metodo.value == 0) {
+escolha.addEventListener('change', function () {
+  if (escolha.value == 0) {
     formCesar.style.display = 'none'
-    formBase.style.display = "none"
-  } else if (metodo.value == 1) {
-    formCesar.style.display = "flex"
-    formBase.style.display = "none"
-  } else if (metodo.value == 2) {
-    formBase.style.display = "flex"
-    formCesar.style.display = "none"
+    formBase64.style.display = 'none'
+  } else if (escolha.value == 1) {
+    formCesar.style.display = 'flex'
+    formBase64.style.display = 'none'
+  } else if (escolha.value == 2) {
+    formBase64.style.display = 'flex'
+    formCesar.style.display = 'none'
   }
 });
 
-var radioCifraDeCesar = document.querySelectorAll(".radio")
-var radioBase64 = document.querySelectorAll(".radio2")
-var btnCodDecod = document.getElementById("codDec")
+var radioCifraDeCesar = document.querySelectorAll('.radio')
+var radioBase64 = document.querySelectorAll('.radio2')
+var btnCodDecod = document.getElementById('codDec')
 var btnCodDecod2 = document.getElementById("codDec2")
 
 radioCesar[0].addEventListener('click', function () {
