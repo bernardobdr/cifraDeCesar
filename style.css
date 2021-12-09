@@ -40,6 +40,17 @@ body{
   height: 600px;
   background: #A6E7FF;
 }
+.container{
+  width: 960px;
+  margin: 0 auto;
+}
+.cifra-de-cesar{
+  
+}
+.subtitulo{
+  text-align: center;
+  color: #111;
+}
 
 
 /*Estilizando o footer*/
