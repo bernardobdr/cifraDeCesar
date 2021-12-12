@@ -36,13 +36,16 @@ body{
  letter-spacing: 3px;
 }
 /*Estilizando o form*/
-.formulario-principal{
+.background{
   background: url(imagem/criptografia.png) no-repeat center;
   background-size: cover;
+  opacity: 95%;
+}
+.formulario-principal{
   width: 800px;
   margin: 10px auto;
-  border: 2px solid #FF8A65;
   text-align: center;
+  border: 1.5px solid #111;
 }
 .subtitulo{
   color: #111;
