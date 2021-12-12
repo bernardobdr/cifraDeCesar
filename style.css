@@ -17,7 +17,7 @@ body{
 .header{
  height: 80px;
  width: 100%;
- background-color: #FF8A65;
+ background-color: #ffbd59;
 }
 .container-header{
  width: 960px;
@@ -36,26 +36,29 @@ body{
  letter-spacing: 3px;
 }
 /*Estilizando o form*/
-
 .formulario-principal{
+  background: url(imagem/criptografia.png) no-repeat center;
+  background-size: cover;
   width: 800px;
-  margin: 20px auto;
-  opacity: 100%;
-  background: #fff;
+  margin: 10px auto;
   border: 2px solid #FF8A65;
   text-align: center;
 }
 .subtitulo{
-  color: #FF8A65;
+  color: #111;
   text-transform: uppercase;
   letter-spacing: 3px;
+}
+input{
+  color: #111;
+  margin: 5px;
 }
 
 /*Estilizando o footer*/
 .footer{
    height: 80px;
    width: 100%;
-   background-color: #FF8A65;
+   background-color: #ffbd59;
 }
 .footer p{
  text-align: center;
