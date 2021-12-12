@@ -2,14 +2,14 @@ var escolha = document.querySelector('escolha');
 var formCesar = document.querySelector("formCesar");
 var formBase = document.querySelector("formBase");
 
-metodo.addEventListener("change", function () {
-  if (metodo.value == 0) {
+escolha.addEventListener("change", function () {
+  if (escolha.value == 0) {
     formCesar.style.display = "none";
     formBase.style.display = "none";
-  } else if (metodo.value == 1) {
+  } else if (escolha.value == 1) {
     formCesar.style.display = "flex";
     formBase.style.display = "none";
-  } else if (metodo.value == 2) {
+  } else if (escolha.value == 2) {
     formBase.style.display = "flex";
     formCesar.style.display = "none";
   }

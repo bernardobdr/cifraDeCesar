@@ -35,27 +35,21 @@ body{
  text-transform: uppercase;
  letter-spacing: 3px;
 }
-/*Estilizando o códificador*/
-.principal{
-  background: url(imagem/criptografia-background.jpg);
-  background-size: cover;
-  height: 600px;
-  width: 100%;
-}
+/*Estilizando o form*/
+
 .formulario-principal{
+  width: 800px;
+  margin: 20px auto;
+  opacity: 100%;
   background: #fff;
-  border: 4px solid #FF8A65;
+  border: 2px solid #FF8A65;
+  text-align: center;
 }
 .subtitulo{
-  text-align: center;
-  color: #111;
+  color: #FF8A65;
+  text-transform: uppercase;
+  letter-spacing: 3px;
 }
-/*Estilizando o form*/
-.formulario{
-  border: 1px solid #FF8A65;
-  height: 400px;
-}
-
 
 /*Estilizando o footer*/
 .footer{
