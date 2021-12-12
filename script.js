@@ -16,114 +16,103 @@ escolha.addEventListener('change', function () {
 });
 
 var radioCesar = window.document.querySelectorAll('.radio');
-var radioBase = window.document.querySelectorAll(''.radio2');
+var radioBase = window.document.querySelectorAll('.radio2')
 var btnCodDecod = window.document.querySelector('#codDec');
 var btnCodDecod2 = window.document.querySelector('#codDec2');
 
 radioCesar[0].addEventListener('click', function () {
   if (radioCesar[0].checked) {
-    btnCodDecod.innerHTML = "Mensagem codificado:";
+    btnCodDecod.innerHTML = 'Mensagem codificado:';
   }
 });
 
 radioCesar[1].addEventListener('click', function () {
   if (radioCesar[1].checked) {
-    btnCodDecod.innerHTML = "Mensagem decodificada:";
+    btnCodDecod.innerHTML = 'Mensagem decodificada:';
   }
 });
 
 radioBase[0].addEventListener('click', function () {
   if (radioBase[0].checked) {
-    btnCodDecod2.innerHTML = 'Mensagem codificada:';
+    btnCodDecod2.innerHTML = 'Mensagem codificada:'
   }
 });
 
 radioBase[1].addEventListener('click', function () {
   if (radioBase[1].checked) {
-    btnCodDecod2.innerHTML = 'Mensagem decodificada:';
+    btnCodDecod2.innerHTML = 'Mensagem decodificada:'
   }
 });
 
 // Criptografia Cifra de César
 
-var entrada = window.document.querySelector('entrada');
-var saida = window.document.getElementById('saida');
-var chavePasso = window.document.getElementById("chavePasso");
-var valueChave;
+var entrada = window.document.querySelector('entrada')
+var saida = window.document.getElementById('saida')
+var chavePasso = window.document.getElementById('chavePasso')
+var valueChave
 
-entrada.addEventListener("keyup", function () {
+entrada.addEventListener('keyup', function () {
   if (radioCesar[0].checked) {
-    var valueText = entrada.value.split("");
-    valueChave = parseInt(chavePasso.value);
-    saida.value = codificar(valueText, valueChave);
+    var valueText = entrada.value.split('')
+    valueChave = parseInt(chavePasso.value)
+    saida.value = codificar(valueText, valueChave)
   } else {
-    var valueText = entrada.value.split("");
-    valueChave = parseInt(chavePasso.value);
-    saida.value = decodificar(valueText, valueChave);
+    var valueText = entrada.value.split('')
+    valueChave = parseInt(chavePasso.value)
+    saida.value = decodificar(valueText, valueChave)
   }
-});
+})
 
 function codificar(texto, chavePasso) {
   return (
     texto
-      // map é um for que transforma string em array automaticamente
       .map((str) => {
-        // famosa arrow function
         var cripto = str.charCodeAt();
-        // limitar o ascii a letras do alfabeto maiusculas e minusculas
         if (cripto >= 65 && cripto <= 90) {
-          // retornar em string
           return String.fromCharCode(((cripto - 65 + chavePasso) % 26) + 65);
         } else if (cripto >= 97 && cripto <= 122) {
-          return String.fromCharCode(((cripto - 97 + chavePasso) % 26) + 97);
+          return String.fromCharCode(((cripto - 97 + chavePasso) % 26) + 97)
         } else {
-          return str;
+          return str
         }
       })
-      // juntar tudo em uma string novamente
-      .join("")
+      .join('')
   );
 }
 
 function decodificar(texto, chavePasso) {
   return (
     texto
-      // map é um for que transforma string em array automaticamente
       .map((str) => {
-        // famosa arrow function
         var cripto = str.charCodeAt();
-        // limitar o ascii a letras do alfabeto maiusculas e minusculas
         if (cripto >= 65 && cripto <= 90) {
-          // retornar em string
           return String.fromCharCode(cripto - 65 - chavePasso < 0)
-            ? // if e else como operador condicional ternario
+            ?
               String.fromCharCode(((cripto - 65 - chavePasso + 26) % 26) + 65)
-            : String.fromCharCode(((cripto - 65 - chavePasso) % 26) + 65);
+            : String.fromCharCode(((cripto - 65 - chavePasso) % 26) + 65)
         } else if (cripto >= 97 && cripto <= 122) {
           return String.fromCharCode(cripto - 97 - chavePasso < 0)
             ? String.fromCharCode(((cripto - 97 - chavePasso + 26) % 26) + 97)
-            : String.fromCharCode(((cripto - 97 - chavePasso) % 26) + 65);
+            : String.fromCharCode(((cripto - 97 - chavePasso) % 26) + 65)
         } else {
-          return str;
+          return str
         }
       })
-      // juntar tudo em uma string novamente
-      .join("")
-  );
+      .join('')
+  )
 }
 
-// Criptografia do Base64
-var entradaBase = window.document.getElementById("entrada2");
-var saida2 = window.document.getElementById("saida2");
+var entradaBase = window.document.getElementById('entrada2')
+var saida2 = window.document.getElementById('saida2')
 var baseValue;
 
-entradaBase.addEventListener("keyup", function () {
-  baseValue = entradaBase.value;
+entradaBase.addEventListener('keyup', function () {
+  baseValue = entradaBase.value
   if (radioBase[0].checked) {
-    saida2.value = btoa(baseValue);
+    saida2.value = btoa(baseValue)
   } else if (radioBase[1].checked) {
-    saida2.value = atob(baseValue);
+    saida2.value = atob(baseValue)
   } else {
-    return 0;
+    return 0
   }
-});
+})
