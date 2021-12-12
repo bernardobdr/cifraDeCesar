@@ -37,14 +37,13 @@ body{
 }
 /*Estilizando o códificador*/
 .principal{
-  height: 800px;
-  background: #A6E7FF;
-  width: 940px;
-  margin: 0 auto;
-  text-align: center;
-  padding: 20px;
+  background: url(imagem/criptografia-background.jpg);
+  background-size: cover;
+  height: 600px;
+  width: 100%;
 }
 .form-principal{
+  background: #fff;
   border: 4px solid #FF8A65;
 }
 .subtitulo{
@@ -56,23 +55,7 @@ body{
   border: 1px solid #FF8A65;
   height: 400px;
 }
-  .tituloForm, .tituloTextArea{
-    color: #111;
-    text-transform: uppercase;
-    font-size: 28px;
-    font-weight: normal;
-    letter-spacing: 1px;
-    margin: 20px;
-  }
-  textarea{
-    margin: 20px;
-  }
-  #divCifra{
-    display: none;
-  }
-  #divBase64{
-    display: none;
-  }
+
 
 /*Estilizando o footer*/
 .footer{
