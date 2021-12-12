@@ -1,6 +1,6 @@
-var escolha = window.document.querySelector('escolha');
-var formCesar = window.document.querySelector('formCesar');
-var formBase64 = window.document.querySelector('formBase64');
+var escolha = window.document.querySelector('#escolha');
+var formCesar = window.document.querySelector('#formCesar');
+var formBase64 = window.document.querySelector('#formBase64');
 
 escolha.addEventListener('change', function () {
   if (escolha.value == 0) {
@@ -100,8 +100,8 @@ function decodificar(texto, chavePasso) {
   )
 }
 
-var entradaBase64 = window.document.getElementById('entrada2')
-var saida2 = window.document.getElementById('saida2')
+var entradaBase64 = window.document.querySelector('#mensagemEntrada-2')
+var saida2 = window.document.querySelector('#mensagemSaida-2')
 var baseValue;
 
 entradaBase64.addEventListener('keyup', function () {
