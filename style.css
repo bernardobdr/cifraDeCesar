@@ -40,12 +40,14 @@ textarea{
  letter-spacing: 3px;
 }
 /*Estilizando o form*/
-.background{
+/*.background{
   background: url(imagem/criptografia.png) no-repeat center;
   background-size: cover;
-  opacity: 95%;
+  opacity: 60%;
 }
+*/
 .formulario-principal{
+  opacity: 100%;
   width: 800px;
   margin: 10px auto;
   text-align: center;

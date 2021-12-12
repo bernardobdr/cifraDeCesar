@@ -24,7 +24,7 @@ radioCesar[0].addEventListener('click', function () {
   if (radioCesar[0].checked) {
     btnCodDecod.innerHTML = 'Mensagem codificada:'
   }
-});
+})
 
 radioCesar[1].addEventListener('click', function () {
   if (radioCesar[1].checked) {
@@ -52,11 +52,11 @@ var valueChave;
 entrada.addEventListener('keyup', function () {
   if (radioCesar[0].checked) {
     var valueText = entrada.value.split('')
-    valueChave = parseInt(chavePasso.value)
+    valueChave = parseInt(chavePasso.value);
     saida.value = codificar(valueText, valueChave)
   } else {
     var valueText = entrada.value.split('')
-    valueChave = parseInt(chavePasso.value)
+    valueChave = parseInt(chavePasso.value);
     saida.value = decodificar(valueText, valueChave)
   }
 })
