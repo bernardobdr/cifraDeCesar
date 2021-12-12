@@ -44,9 +44,9 @@ radioBase64[1].addEventListener('click', function () {
   }
 })
 
-var entrada = window.document.querySelector('#entrada')
-var saida = window.document.querySelector('#saida')
-var chavePasso = window.document.querySelector('#chavePasso')
+var entrada = window.document.querySelector('#mensagemEntrada')
+var saida = window.document.querySelector('#mensagemSaida')
+var chavePasso = window.document.querySelector('#movimentar')
 var valueChave;
 
 entrada.addEventListener('keyup', function () {
@@ -65,11 +65,11 @@ function codificar(texto, chavePasso) {
   return (
     texto
       .map((str) => {
-        var cripto = str.charCodeAt();
-        if (cripto >= 65 && cripto <= 90) {
-          return String.fromCharCode(((cripto - 65 + chavePasso) % 26) + 65);
-        } else if (cripto >= 97 && cripto <= 122) {
-          return String.fromCharCode(((cripto - 97 + chavePasso) % 26) + 97)
+        var criptografia = str.charCodeAt();
+        if (criptografia >= 65 && criptografia <= 90) {
+          return String.fromCharCode(((criptografia - 65 + chavePasso) % 26) + 65);
+        } else if (criptografia >= 97 && criptografia <= 122) {
+          return String.fromCharCode(((criptografia - 97 + chavePasso) % 26) + 97)
         } else {
           return str
         }
@@ -82,16 +82,16 @@ function decodificar(texto, chavePasso) {
   return (
     texto
       .map((str) => {
-        var cripto = str.charCodeAt();
-        if (cripto >= 65 && cripto <= 90) {
-          return String.fromCharCode(cripto - 65 - chavePasso < 0)
+        var criptografia = str.charCodeAt();
+        if (criptografia >= 65 && criptografia <= 90) {
+          return String.fromCharCode(criptografia - 65 - chavePasso < 0)
             ?
-              String.fromCharCode(((cripto - 65 - chavePasso + 26) % 26) + 65)
-            : String.fromCharCode(((cripto - 65 - chavePasso) % 26) + 65)
-        } else if (cripto >= 97 && cripto <= 122) {
-          return String.fromCharCode(cripto - 97 - chavePasso < 0)
-            ? String.fromCharCode(((cripto - 97 - chavePasso + 26) % 26) + 97)
-            : String.fromCharCode(((cripto - 97 - chavePasso) % 26) + 65)
+              String.fromCharCode(((criptografia - 65 - chavePasso + 26) % 26) + 65)
+            : String.fromCharCode(((criptografia - 65 - chavePasso) % 26) + 65)
+        } else if (criptografia >= 97 && criptografia <= 122) {
+          return String.fromCharCode(criptografia - 97 - chavePasso < 0)
+            ? String.fromCharCode(((criptografia - 97 - chavePasso + 26) % 26) + 97)
+            : String.fromCharCode(((criptografia - 97 - chavePasso) % 26) + 65)
         } else {
           return str
         }
