@@ -14,20 +14,20 @@ body{
   font-size: 16pt;
 }
 textarea{
-  width: 200px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
 }
 /*Estilo Header*/
 .header{
  height: 80px;
  width: 100%;
- background-color: #ffbd59;
+ background-color: #FF8A65;
 }
 .container-header{
- width: 1000px;
+ width: 1080px;
  margin: 0 auto;
  display: flex;
- justify-content: space-between;
+ justify-content: space-around;
  flex-wrap: wrap;
  align-items: center;
 }
@@ -39,16 +39,15 @@ textarea{
  text-transform: uppercase;
  letter-spacing: 3px;
 }
+
 /*Estilizando o form*/
-.background{
-  background: url(imagem/criptografia.png) no-repeat center;
-  background-size: cover;
-}       
+
 
 .formulario-principal{
+  background: #FFE082;
   opacity: 100%;
-  width: 1080px;
-  margin: 10px auto;
+  width: 960px;
+  margin: 20px auto;
   text-align: center;
   border: 1.5px solid #111;
 }
@@ -56,6 +55,14 @@ textarea{
   color: #111;
   text-transform: uppercase;
   letter-spacing: 3px;
+}
+.subtitulo::after{
+  content: "";
+  display: block;
+  width: 120px;
+  height: 3px;
+  background: #111;
+  margin: 8px auto;
 }
 input{
   color: #111;
@@ -67,7 +74,7 @@ input{
 .footer{
    height: 80px;
    width: 100%;
-   background-color: #ffbd59;
+   background-color: #FF8A65;
 }
 .footer p{
  text-align: center;
@@ -75,4 +82,5 @@ input{
  color: #FFF;
  font-weight: bold;
  letter-spacing: 2px;
+ margin: 0;
 }  
