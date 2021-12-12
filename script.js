@@ -1,55 +1,53 @@
 var escolha = window.document.querySelector('escolha');
-var formCesar = window.document.querySelector("formCesar");
-var formBase = window.document.querySelector("formBase");
+var formCesar = window.document.querySelector('formCesar');
+var formBase64 = window.document.querySelector('formBase64');
 
-escolha.addEventListener("change", function () {
+escolha.addEventListener('change', function () {
   if (escolha.value == 0) {
-    formCesar.style.display = "none";
-    formBase.style.display = "none";
+    formCesar.style.display = 'none';
+    formBase64.style.display = 'none';
   } else if (escolha.value == 1) {
-    formCesar.style.display = "flex";
-    formBase.style.display = "none";
+    formCesar.style.display = 'flex';
+    formBase64.style.display = 'none';
   } else if (escolha.value == 2) {
-    formBase.style.display = "flex";
-    formCesar.style.display = "none";
+    formBase64.style.display = 'flex';
+    formCesar.style.display = 'none';
   }
 });
 
-// Mudar botão de decodificar e codificar
+var radioCesar = window.document.querySelectorAll('.radio');
+var radioBase = window.document.querySelectorAll(''.radio2');
+var btnCodDecod = window.document.querySelector('#codDec');
+var btnCodDecod2 = window.document.querySelector('#codDec2');
 
-var radioCesar = window.document.querySelectorAll(".radio");
-var radioBase = window.document.querySelectorAll(".radio2");
-var btnCodDecod = window.document.getElementById("codDec");
-var btnCodDecod2 = window.document.getElementById("codDec2");
-
-radioCesar[0].addEventListener("click", function () {
+radioCesar[0].addEventListener('click', function () {
   if (radioCesar[0].checked) {
-    btnCodDecod.innerHTML = "Resultado codificado:";
+    btnCodDecod.innerHTML = "Mensagem codificado:";
   }
 });
 
-radioCesar[1].addEventListener("click", function () {
+radioCesar[1].addEventListener('click', function () {
   if (radioCesar[1].checked) {
-    btnCodDecod.innerHTML = "Resultado decodificado:";
+    btnCodDecod.innerHTML = "Mensagem decodificada:";
   }
 });
 
-radioBase[0].addEventListener("click", function () {
+radioBase[0].addEventListener('click', function () {
   if (radioBase[0].checked) {
-    btnCodDecod2.innerHTML = "Resultado codificado:";
+    btnCodDecod2.innerHTML = 'Mensagem codificada:';
   }
 });
 
-radioBase[1].addEventListener("click", function () {
+radioBase[1].addEventListener('click', function () {
   if (radioBase[1].checked) {
-    btnCodDecod2.innerHTML = "Resultado decodificado:";
+    btnCodDecod2.innerHTML = 'Mensagem decodificada:';
   }
 });
 
 // Criptografia Cifra de César
 
-var entrada = window.document.getElementById("entrada");
-var saida = window.document.getElementById("saida");
+var entrada = window.document.querySelector('entrada');
+var saida = window.document.getElementById('saida');
 var chavePasso = window.document.getElementById("chavePasso");
 var valueChave;
 
@@ -57,15 +55,15 @@ entrada.addEventListener("keyup", function () {
   if (radioCesar[0].checked) {
     var valueText = entrada.value.split("");
     valueChave = parseInt(chavePasso.value);
-    saida.value = codifica(valueText, valueChave);
+    saida.value = codificar(valueText, valueChave);
   } else {
     var valueText = entrada.value.split("");
     valueChave = parseInt(chavePasso.value);
-    saida.value = decodifica(valueText, valueChave);
+    saida.value = decodificar(valueText, valueChave);
   }
 });
 
-function codifica(texto, chavePasso) {
+function codificar(texto, chavePasso) {
   return (
     texto
       // map é um for que transforma string em array automaticamente
@@ -87,7 +85,7 @@ function codifica(texto, chavePasso) {
   );
 }
 
-function decodifica(texto, chavePasso) {
+function decodificar(texto, chavePasso) {
   return (
     texto
       // map é um for que transforma string em array automaticamente
