@@ -1,6 +1,6 @@
-var escolha = document.querySelector('escolha');
-var formCesar = document.querySelector("formCesar");
-var formBase = document.querySelector("formBase");
+var escolha = window.document.querySelector('escolha');
+var formCesar = window.document.querySelector("formCesar");
+var formBase = window.document.querySelector("formBase");
 
 escolha.addEventListener("change", function () {
   if (escolha.value == 0) {
@@ -17,10 +17,10 @@ escolha.addEventListener("change", function () {
 
 // Mudar botão de decodificar e codificar
 
-var radioCesar = document.querySelectorAll(".radio");
-var radioBase = document.querySelectorAll(".radio2");
-var btnCodDecod = document.getElementById("codDec");
-var btnCodDecod2 = document.getElementById("codDec2");
+var radioCesar = window.document.querySelectorAll(".radio");
+var radioBase = window.document.querySelectorAll(".radio2");
+var btnCodDecod = window.document.getElementById("codDec");
+var btnCodDecod2 = window.document.getElementById("codDec2");
 
 radioCesar[0].addEventListener("click", function () {
   if (radioCesar[0].checked) {
@@ -48,9 +48,9 @@ radioBase[1].addEventListener("click", function () {
 
 // Criptografia Cifra de César
 
-var entrada = document.getElementById("entrada");
-var saida = document.getElementById("saida");
-var chavePasso = document.getElementById("chavePasso");
+var entrada = window.document.getElementById("entrada");
+var saida = window.document.getElementById("saida");
+var chavePasso = window.document.getElementById("chavePasso");
 var valueChave;
 
 entrada.addEventListener("keyup", function () {
@@ -115,8 +115,8 @@ function decodifica(texto, chavePasso) {
 }
 
 // Criptografia do Base64
-var entradaBase = document.getElementById("entrada2");
-var saida2 = document.getElementById("saida2");
+var entradaBase = window.document.getElementById("entrada2");
+var saida2 = window.document.getElementById("saida2");
 var baseValue;
 
 entradaBase.addEventListener("keyup", function () {
