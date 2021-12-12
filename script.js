@@ -15,41 +15,39 @@ escolha.addEventListener('change', function () {
   }
 });
 
-var radioCesar = window.document.querySelectorAll('.radio');
-var radioBase = window.document.querySelectorAll('.radio2')
-var btnCodDecod = window.document.querySelector('#codDec');
-var btnCodDecod2 = window.document.querySelector('#codDec2');
+var radioCesar = window.document.querySelectorAll('.radio-1')
+var radioBase64 = window.document.querySelectorAll('.radio-2')
+var btnCodDecod = window.document.querySelector('#codificarDecodificar-1')
+var btnCodDecod2 = window.document.querySelector('#codificarDecodificar-2')
 
 radioCesar[0].addEventListener('click', function () {
   if (radioCesar[0].checked) {
-    btnCodDecod.innerHTML = 'Mensagem codificado:';
+    btnCodDecod.innerHTML = 'Mensagem codificada:'
   }
 });
 
 radioCesar[1].addEventListener('click', function () {
   if (radioCesar[1].checked) {
-    btnCodDecod.innerHTML = 'Mensagem decodificada:';
+    btnCodDecod.innerHTML = 'Mensagem decodificada:'
   }
-});
+})
 
-radioBase[0].addEventListener('click', function () {
-  if (radioBase[0].checked) {
+radioBase64[0].addEventListener('click', function () {
+  if (radioBase64[0].checked) {
     btnCodDecod2.innerHTML = 'Mensagem codificada:'
   }
-});
+})
 
-radioBase[1].addEventListener('click', function () {
-  if (radioBase[1].checked) {
+radioBase64[1].addEventListener('click', function () {
+  if (radioBase64[1].checked) {
     btnCodDecod2.innerHTML = 'Mensagem decodificada:'
   }
-});
+})
 
-// Criptografia Cifra de César
-
-var entrada = window.document.querySelector('entrada')
-var saida = window.document.getElementById('saida')
-var chavePasso = window.document.getElementById('chavePasso')
-var valueChave
+var entrada = window.document.querySelector('#entrada')
+var saida = window.document.querySelector('#saida')
+var chavePasso = window.document.querySelector('#chavePasso')
+var valueChave;
 
 entrada.addEventListener('keyup', function () {
   if (radioCesar[0].checked) {
@@ -77,7 +75,7 @@ function codificar(texto, chavePasso) {
         }
       })
       .join('')
-  );
+  )
 }
 
 function decodificar(texto, chavePasso) {
@@ -102,15 +100,15 @@ function decodificar(texto, chavePasso) {
   )
 }
 
-var entradaBase = window.document.getElementById('entrada2')
+var entradaBase64 = window.document.getElementById('entrada2')
 var saida2 = window.document.getElementById('saida2')
 var baseValue;
 
-entradaBase.addEventListener('keyup', function () {
-  baseValue = entradaBase.value
-  if (radioBase[0].checked) {
+entradaBase64.addEventListener('keyup', function () {
+  baseValue = entradaBase64.value
+  if (radioBase64[0].checked) {
     saida2.value = btoa(baseValue)
-  } else if (radioBase[1].checked) {
+  } else if (radioBase64[1].checked) {
     saida2.value = atob(baseValue)
   } else {
     return 0

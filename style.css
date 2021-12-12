@@ -11,7 +11,11 @@ body{
   padding: 0;
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
-  
+  font-size: 16pt;
+}
+textarea{
+  width: 200px;
+  height: 100px;
 }
 /*Estilo Header*/
 .header{
@@ -20,7 +24,7 @@ body{
  background-color: #ffbd59;
 }
 .container-header{
- width: 960px;
+ width: 1000px;
  margin: 0 auto;
  display: flex;
  justify-content: space-between;
